@@ -24,12 +24,14 @@ export default defineManifest({
     service_worker: 'src/background/index.js',
     type: 'module',
   },
-  content_scripts: [
-    {
-      matches: ['http://*/*', 'https://*/*'],
-      js: ['src/contentScript/index.js'],
-    },
-  ],
+  content_scripts: isDev
+    ? [
+        {
+          matches: ['http://*/*', 'https://*/*'],
+          js: ['src/contentScript/index.js'],
+        },
+      ]
+    : undefined,
   side_panel: {
     default_path: 'sidepanel.html',
   },
