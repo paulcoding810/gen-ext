@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { patchManifest } from './src/convert.js'
 import manifest from './src/manifest.js'
+import svgr from 'vite-plugin-svgr'
 
 const browser = process.env.BROWSER ?? 'chrome'
 // https://vitejs.dev/config/
@@ -28,7 +29,7 @@ export default defineConfig(({ mode }) => {
       ],
     },
 
-    plugins: [crx({ manifest: convertedManifest, browser }), react()],
+    plugins: [crx({ manifest: convertedManifest, browser }), react(), svgr()],
     legacy: {
       skipWebSocketTokenCheck: true,
     },
