@@ -18,6 +18,13 @@ npm install -g gen-ext
 gen-ext
 ```
 
+### Update logo
+
+```sh
+cd your_extension_folder
+gen-ext logo path/to/your/new/logo.svg
+```
+
 ## License
 
 [MIT](LICENSE)

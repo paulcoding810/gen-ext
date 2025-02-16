@@ -1,6 +1,6 @@
 {
   "name": "gen-ext",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "generate.js",
   "license": "MIT",
   "bin": {
@@ -8,8 +8,10 @@
   },
   "type": "module",
   "dependencies": {
+    "commander": "^13.1.0",
     "fs-extra": "^11.3.0",
     "ignore": "^7.0.3",
-    "inquirer": "^12.4.2"
+    "inquirer": "^12.4.2",
+    "sharp": "^0.33.5"
   }
 }

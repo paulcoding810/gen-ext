@@ -1,10 +1,26 @@
 #!/usr/bin/env node
 
+import { Command } from "commander";
 import fs from "fs-extra";
 import ignore from "ignore";
 import inquirer from "inquirer";
 import { fileURLToPath } from "node:url";
 import path from "path";
+import { generateIcons } from "./logo.js";
+
+const program = new Command();
+
+program
+  .command("logo")
+  .description("Generate logo icons")
+  .argument("<svg_path>", "path to svg icon")
+  .action((path) => {
+    generateIcons(path);
+  });
+
+program.action(() => generateProject().catch(console.error));
+
+program.parse(process.argv);
 
 async function generateProject() {
   const answers = await inquirer.prompt([
@@ -70,5 +86,3 @@ async function generateProject() {
     6. Select the build/ directory that was created.
   `);
 }
-
-generateProject().catch(console.error);
