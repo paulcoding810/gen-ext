@@ -1,0 +1,15 @@
+{
+  "name": "browser-extension-template",
+  "version": "1.0.0",
+  "main": "generate.js",
+  "license": "MIT",
+  "bin": {
+    "gen-ext": "./generate.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "ignore": "^7.0.3",
+    "inquirer": "^12.4.2"
+  }
+}
