@@ -12,9 +12,6 @@ jobs:
   build:
     name: Create artifacts
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./template
     steps:
       - uses: actions/checkout@v4
       - uses: actions/cache@v4
