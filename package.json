@@ -1,5 +1,5 @@
 {
-  "name": "browser-extension-template",
+  "name": "gen-ext",
   "version": "1.0.0",
   "main": "generate.js",
   "license": "MIT",

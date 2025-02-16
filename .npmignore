@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+
+# git
+.git
+
+# npm
+node_modules
+yarn.lock
+package-lock.json
+template/node_modules
+template/build
+
+# others
+.gitignore
+.gitattributes
