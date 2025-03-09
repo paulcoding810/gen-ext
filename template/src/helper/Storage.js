@@ -16,13 +16,25 @@ export default class Storage {
     })
   }
 
+  async setValue(value) {
+    return new Promise((resolve, reject) => {
+      chrome.storage.local.set({ [this.namespace]: value }, () => {
+        if (chrome.runtime.lastError) {
+          reject(chrome.runtime.lastError)
+        } else {
+          resolve(true)
+        }
+      })
+    })
+  }
+
   async get(key = null) {
     return new Promise((resolve, reject) => {
       chrome.storage.local.get(this.namespace, (result) => {
         if (chrome.runtime.lastError) {
           reject(chrome.runtime.lastError)
         } else {
-          resolve(key ? result[this.namespace][key] : result[this.namespace])
+          resolve(key ? result[this.namespace]?.[key] : result[this.namespace])
         }
       })
     })
