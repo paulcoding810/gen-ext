@@ -1,6 +1,6 @@
 // https://github.com/FoxRefire/ChromeXPIPorter/blob/main/patchExt.js
 
-import packageData from '../package.json' assert { type: 'json' }
+import packageData from '../package.json' with { type: 'json' }
 import manifest from './manifest.js'
 
 const isDev = process.env.NODE_ENV === 'development'
