@@ -11,7 +11,7 @@
     "firefox-extension",
     "react",
     "vite",
-    "create-chrome-ext"
+    "gen-ext"
   ],
   "engines": {
     "node": ">=14.18.0"
