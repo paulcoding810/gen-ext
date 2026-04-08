@@ -76,6 +76,20 @@ async function generateProject() {
   readmeContent = readmeContent.replace(/my-crx-app/g, answers.name);
   await fs.writeFile(readmePath, readmeContent);
 
+  // Update html titles
+  [
+    "devtools.html",
+    "newtab.html",
+    "options.html",
+    "popup.html",
+    "sidepanel.html",
+  ].forEach(async (file) => {
+    const filePath = path.join(outputDir, file);
+    let content = await fs.readFile(filePath, "utf8");
+    content = content.replace(/my-crx-app/g, answers.name);
+    await fs.writeFile(filePath, content);
+  });
+
   console.log(`
    Suggest you next step:
     1. cd ${path.relative(process.cwd(), outputDir)}
