@@ -34,6 +34,9 @@ export async function patchManifest() {
   manifest.browser_specific_settings = {
     gecko: {
       id: newExtId,
+      data_collection_permissions: {
+        required: ['none'],
+      },
     },
   }
 
