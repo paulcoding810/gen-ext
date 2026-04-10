@@ -22,11 +22,12 @@ program.action(() => generateProject().catch(console.error));
 program.parse(process.argv);
 
 async function generateProject() {
-  const { name, version, description, author } = await inquirer.prompt([
+  const { name, version, description, author, logo } = await inquirer.prompt([
     { name: "name", message: "Project name:", default: "my-crx-app" },
     { name: "version", message: "Version:", default: "0.0.0" },
     { name: "description", message: "Description:", default: "" },
     { name: "author", message: "Author:", default: "" },
+    { name: "logo", message: "Logo (SVG path, optional):", default: "" },
   ]);
 
   const templateDir = path.resolve(
@@ -70,6 +71,10 @@ async function generateProject() {
     "sidepanel.html",
   ].map((f) => path.join(outputDir, f));
   await Promise.all(files.map(fileReplacer));
+
+  if (logo) {
+    await generateIcons(logo, outputDir);
+  }
 
   console.log(`Project "${name}" created. Next steps:
   1. cd ${name}
