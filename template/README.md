@@ -1,3 +1,38 @@
+[![Badge Commits]][Commit Rate]
+[![Badge Issues]][Issues]
+[![Badge License]][License]
+[![Badge Mozilla]][Mozilla]
+[![Badge Chrome]][Chrome]
+
+---
+
+<h1 align="center">
+<sub>
+<img src="public/img/logo-48.png" height="38" width="38">
+</sub>
+my-crx-app
+</h1>
+
+---
+
+<p align="center">
+<a href="https://addons.mozilla.org/en-US/firefox/addon/my-crx-app/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get my-crx-app for Firefox"></a>
+<a href="https://chromewebstore.google.com/detail/my-crx-app/chome-id"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get my-crx-app for Chromium"></a>
+</p>
+
+---
+
+[Mozilla]: https://addons.mozilla.org/en-US/firefox/addon/my-crx-app/
+[Chrome]: https://chromewebstore.google.com/detail/my-crx-app/chome-id
+[License]: https://raw.githubusercontent.com/paulcoding810/my-crx-app/refs/heads/main/LICENSE
+[Commit Rate]: https://github.com/paulcoding810/my-crx-app/commits/main
+[Issues]: https://github.com/paulcoding810/my-crx-app/issues
+[Badge Commits]: https://img.shields.io/github/commit-activity/m/paulcoding810/my-crx-app?label=Commits
+[Badge Mozilla]: https://img.shields.io/amo/v/my-crx-app
+[Badge Chrome]: https://img.shields.io/chrome-web-store/v/chome-id
+[Badge License]: https://img.shields.io/badge/License-MIT-yellow.svg
+[Badge Issues]: https://img.shields.io/github/issues/paulcoding810/my-crx-app/issues
+
 # my-crx-app
 
 > a chrome/firefox extension tools built with Vite + React-js, and Manifest v3
@@ -10,12 +45,9 @@
 
 ## Developing
 
-run the command
-
 ```shell
-$ cd my-crx-app
-
-$ yarn dev
+cd my-crx-app
+yarn dev
 ```
 
 ### Chrome Extension Developer Mode
@@ -31,12 +63,9 @@ $ yarn dev
 
 ## Packing
 
-After the development of your extension run the command
-
 ```shell
-$ yarn zip # for chrome
-or
-$ yarn zip:firefox # for firefox
+yarn zip # for chrome
+yarn zip:firefox # for firefox
 ```
 
 ---
