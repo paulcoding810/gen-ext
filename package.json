@@ -3,6 +3,10 @@
   "version": "1.0.3",
   "main": "generate.js",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulcoding810/gen-ext"
+  },
   "bin": {
     "gen-ext": "./generate.js"
   },
