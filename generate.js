@@ -57,10 +57,10 @@ async function generateProject() {
   projectPkg.author = author;
   await fs.writeFile(pkgPath, JSON.stringify(projectPkg, null, 2));
 
-  const fileReplacer = (file) =>
+  const fileReplacer = (file, searchValue, replaceValue) =>
     fs
       .readFile(file, "utf8")
-      .then((c) => fs.writeFile(file, c.replace(/my-crx-app/g, name)));
+      .then((c) => fs.writeFile(file, c.replace(searchValue, replaceValue)));
 
   const files = [
     "README.md",
@@ -70,7 +70,9 @@ async function generateProject() {
     "popup.html",
     "sidepanel.html",
   ].map((f) => path.join(outputDir, f));
-  await Promise.all(files.map(fileReplacer));
+
+  await Promise.all(files.map((f) => fileReplacer(f, /my-crx-app/g, name)));
+  await fileReplacer(path.join(outputDir, "LICENSE"), "{{author}}", author);
 
   if (logo) {
     await generateIcons(logo, outputDir);
