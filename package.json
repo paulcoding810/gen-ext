@@ -1,6 +1,6 @@
 {
   "name": "gen-ext",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "generate.js",
   "license": "MIT",
   "repository": {
