@@ -16,27 +16,37 @@ jobs:
       run:
         working-directory: ./template
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
-          cache-dependency-path: "template/yarn.lock"
-          cache: "yarn"
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('template/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm install --frozen-lockfile
 
       - name: Create Chrome artifacts
-        run: yarn zip
+        run: pnpm zip
 
       - name: Create Firefox artifacts
-        run: yarn zip:firefox
+        run: pnpm zip:firefox
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v5
         with:
           name: extensions
           path: template/package/*
