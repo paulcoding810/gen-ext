@@ -18,12 +18,13 @@
   },
   "scripts": {
     "dev": "vite",
+    "dev:firefox": "BROWSER=firefox NODE_ENV=development vite build --mode development --minify false",
     "build": "vite build",
     "build:firefox": "BROWSER=firefox vite build",
     "preview": "vite preview",
     "fmt": "prettier --write '**/*.{jsx,js,json,css,scss,md}'",
-    "zip": "yarn build && node src/zip.js",
-    "zip:firefox": "export BROWSER=firefox && yarn build && node src/zip.js"
+    "zip": "pnpm build && node src/zip.js",
+    "zip:firefox": "export BROWSER=firefox && pnpm build && node src/zip.js"
   },
   "dependencies": {
     "react": "^18.2.0",
