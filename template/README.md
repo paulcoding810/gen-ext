@@ -41,13 +41,13 @@ my-crx-app
 
 1. Check if your `Node.js` version is >= **14**.
 2. Change or configurate the name of your extension on `src/manifest`.
-3. Run `yarn` to install the dependencies.
+3. Run `pnpm` to install the dependencies.
 
 ## Developing
 
 ```shell
 cd my-crx-app
-yarn dev
+pnpm dev
 ```
 
 ### Chrome Extension Developer Mode
@@ -57,15 +57,15 @@ yarn dev
 
 ### Firefox Extension Developer Mode
 
-1. Build your project firstly by running `yarn build:firefox`
+1. Build your project firstly by running `pnpm build:firefox`
 2. Open Firefox and go to `about:debugging#/runtime/this-firefox`
 3. Click on 'Load Temporary Add-on' and select `my-crx-app/build` folder
 
 ## Packing
 
 ```shell
-yarn zip # for chrome
-yarn zip:firefox # for firefox
+pnpm zip # for chrome
+pnpm zip:firefox # for firefox
 ```
 
 ---

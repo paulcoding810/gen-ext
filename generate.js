@@ -78,8 +78,8 @@ async function generateProject() {
     await generateIcons(logo, outputDir);
   }
 
-  console.log(`Project "${name}" created. Next steps:
+   console.log(`Project "${name}" created. Next steps:
   1. cd ${name}
-  2. yarn install
+  2. pnpm install
   3. Open chrome://extensions/ → Developer mode → Load unpacked → select build/`);
 }
