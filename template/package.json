@@ -22,7 +22,7 @@
     "build": "vite build",
     "build:firefox": "BROWSER=firefox vite build",
     "preview": "vite preview",
-    "fmt": "prettier --write '**/*.{jsx,js,json,css,scss,md}'",
+    "fmt": "prettier --write '**/*.{jsx,js,tsx,ts,json,css,scss,md}'",
     "zip": "pnpm build && node src/zip.js",
     "zip:firefox": "export BROWSER=firefox && pnpm build && node src/zip.js"
   },
