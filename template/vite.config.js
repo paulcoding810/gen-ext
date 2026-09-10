@@ -14,6 +14,7 @@ export default defineConfig(({ mode }) => {
     build: {
       emptyOutDir: true,
       outDir: `build/${browser}`,
+      sourcemap: mode === 'development',
       rollupOptions: {
         output: {
           chunkFileNames: 'assets/chunk-[hash].js',
