@@ -16,19 +16,19 @@ my-crx-app
 ---
 
 <p align="center">
-<a href="https://addons.mozilla.org/en-US/firefox/addon/my-crx-app/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get my-crx-app for Firefox"></a>
-<a href="https://chromewebstore.google.com/detail/my-crx-app/chome-id"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get my-crx-app for Chromium"></a>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/firefox-id/"><img src="https://user-images.githubusercontent.com/585534/107280546-7b9b2a00-6a26-11eb-8f9f-f95932f4bfec.png" alt="Get my-crx-app for Firefox"></a>
+<a href="https://chromewebstore.google.com/detail/chome-id"><img src="https://user-images.githubusercontent.com/585534/107280622-91a8ea80-6a26-11eb-8d07-77c548b28665.png" alt="Get my-crx-app for Chromium"></a>
 </p>
 
 ---
 
-[Mozilla]: https://addons.mozilla.org/en-US/firefox/addon/my-crx-app/
-[Chrome]: https://chromewebstore.google.com/detail/my-crx-app/chome-id
+[Mozilla]: https://addons.mozilla.org/en-US/firefox/addon/firefox-id/
+[Chrome]: https://chromewebstore.google.com/detail/chome-id
 [License]: https://raw.githubusercontent.com/paulcoding810/my-crx-app/refs/heads/main/LICENSE
 [Commit Rate]: https://github.com/paulcoding810/my-crx-app/commits/main
 [Issues]: https://github.com/paulcoding810/my-crx-app/issues
 [Badge Commits]: https://img.shields.io/github/commit-activity/m/paulcoding810/my-crx-app?label=Commits
-[Badge Mozilla]: https://img.shields.io/amo/v/my-crx-app
+[Badge Mozilla]: https://img.shields.io/amo/v/firefox-id
 [Badge Chrome]: https://img.shields.io/chrome-web-store/v/chome-id
 [Badge License]: https://img.shields.io/badge/License-MIT-yellow.svg
 [Badge Issues]: https://img.shields.io/github/issues/paulcoding810/my-crx-app/issues
